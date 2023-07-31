@@ -3,23 +3,23 @@ import ReactDOM from 'react-dom';
 import App from './App';
 import './index.css';
 
+
+const Author = 'Abid Ali';
+const title = "Intresting Facts for Curious minds";
+const img ='./images/img.jpeg';
 function BookList(){
   return <div className='booklist'>
-            <Book/> 
-            <Book/> 
-            <Book/> 
-            <Book/> 
+            <Book jobs="developer" /> 
+            <Book jobs="developer"  />  
         </div>
 }
-const Author = 'Abid Ali';
-const Book = () =>{
-  let title = "Intresting Facts for Curious minds"
+const Book = (props) =>{ 
+  console.log(props);
   return <article className="book">
-          <img src="./images/img.jpeg" alt="Intresting Facts for Curious minds"/>
+          <img src={img} alt="Intresting Facts for Curious minds"/>
           <h2>{title}</h2>
           <h4>{Author.toUpperCase()}</h4>
-          {/* <p>{let x=6;}</p> */}
-          <p>{6+6}</p>
+           {console.log(props)}
         </article>
 }   
 
